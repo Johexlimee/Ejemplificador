@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    echo "esta es la pagina god";
     return view('welcome');
+});
+
+//estatica (::) , de instancia de clase (->)
+
+Route::get('/venida', function () {
+    echo "pagina venida";
+    return view('welcome');
+});
+
+Route::get('/asta', function() {
+    $msj = "Mielda loco el diablo";
+    return view('asta',['msj' => $msj, 'num' => 27]);
 });
