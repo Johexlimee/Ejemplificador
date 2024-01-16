@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/venida', function () {
     echo "pagina venida";
     return view('welcome');
-});
+})->name('venida');
 
 Route::get('/asta', function() {
     $msj = "Mielda loco el diablo";
