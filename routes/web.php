@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/',[TestController::class, 'index']);
+
+/*Route::get('/', function () {
     echo "esta es la pagina god";
     return view('welcome');
 });
@@ -28,4 +31,4 @@ Route::get('/venida', function () {
 Route::get('/asta', function() {
     $msj = "Mielda loco el diablo";
     return view('asta',['msj' => $msj, 'num' => 27]);
-});
+});*/
