@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+
+@include("fragment.subview")
+
     {{ $name }}
     {{ $age }}
-    {{-- $age --}} <!-- comentario en blade --> 
+    {{-- $age --}}
     {!! $sex !!}
 
     @if ($name == "Carlos")
@@ -18,11 +21,11 @@
         tu nombre no es carlos
     @endif
 
-    @foreach ($array as $a)
+    @foreach ($posts as $a)
         <p> {{$a}} </p>
     @endforeach
 
-    @forelse ($array2 as $a)
+    @forelse ($posts as $a)
         <p> *{{$a}} </p>
     @empty
         no tienes numeros
